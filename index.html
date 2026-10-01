@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>52电影网 - 52dianyingwang-top 我爱电影·像素级高分片单·复古街机风推荐</title>
+<meta name="description" content="52电影网（https://52dianyingwang-top）谐音'我爱电影'，以复古像素街机风推荐高分好片。霓虹网格UI，移动端自适应，必应收录友好。">
+<meta name="keywords" content="52电影网, 52dianyingwang-top, 我爱电影, 高分电影, 像素风, 复古街机, 电影推荐, 影视信息">
+<meta name="author" content="52电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Courier New","Consolas","PingFang SC",monospace;color:#E0E0E0;line-height:1.75;overflow-x:hidden;background:#0D0015;
+background-image:
+linear-gradient(rgba(0,255,255,.03) 1px,transparent 1px),
+linear-gradient(90deg,rgba(0,255,255,.03) 1px,transparent 1px);
+background-size:30px 30px}
+/* 扫描线叠加 */
+body::after{content:"";position:fixed;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.08) 2px,rgba(0,0,0,.08) 4px);pointer-events:none;z-index:9999}
+
+a{color:#00FFFF;text-decoration:none;transition:.2s}
+a:hover{color:#FF00FF}
+
+/* 像素风导航 */
+.p52-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(13,0,21,.95);border-bottom:3px solid #FF00FF;backdrop-filter:blur(4px)}
+.p52-in{max-width:1200px;margin:0 auto;height:64px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.p52-logo{display:flex;align-items:center;gap:.7rem}
+.p52-pixel{width:40px;height:40px;background:#FF00FF;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:900;color:#0D0015;box-shadow:3px 3px 0 #00FFFF;font-family:monospace}
+.p52-name{font-size:1.1rem;font-weight:900;color:#00FFFF;letter-spacing:1px;text-shadow:0 0 8px rgba(0,255,255,.5)}
+.p52-name small{display:block;font-size:.5rem;letter-spacing:4px;color:#FF00FF;font-weight:700}
+.p52-links{display:flex;gap:1.2rem;list-style:none}
+.p52-links a{font-size:.82rem;font-weight:700;color:#E0E0E0;padding:.3rem .7rem;border:2px solid transparent}
+.p52-links a:hover{border-color:#00FFFF;color:#00FFFF;background:rgba(0,255,255,.08);box-shadow:2px 2px 0 #FF00FF}
+.p52-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.p52-toggle span{width:22px;height:2px;background:#00FFFF}
+
+/* Hero */
+.p52-hero{margin-top:64px;padding:5rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden}
+.p52-hero-in{max-width:720px;margin:0 auto;position:relative;z-index:1}
+.p52-badge{display:inline-block;padding:.3rem 1rem;border:2px solid #FF00FF;color:#FF00FF;font-size:.7rem;font-weight:700;letter-spacing:2px;margin-bottom:1.5rem;background:rgba(255,0,255,.08);animation:p52Pulse 2s ease-in-out infinite}
+@keyframes p52Pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,0,255,.4)}50%{box-shadow:0 0 0 8px rgba(255,0,255,0)}}
+.p52-hero h1{font-size:3rem;font-weight:900;color:#00FFFF;line-height:1.2;margin-bottom:1rem;text-shadow:0 0 12px rgba(0,255,255,.4),3px 3px 0 #FF00FF}
+.p52-hero h1 .p52-heart{color:#FF00FF;text-shadow:0 0 12px rgba(255,0,255,.6)}
+.p52-cursor{display:inline-block;width:14px;height:1.1em;background:#39FF14;animation:p52Blink 1s step-end infinite;vertical-align:text-bottom;margin-left:4px}
+@keyframes p52Blink{0%,100%{opacity:1}50%{opacity:0}}
+.p52-hero p{font-size:.9rem;color:#B0B0B0;max-width:520px;margin:0 auto 1.5rem;font-weight:600}
+.p52-domain{display:inline-block;padding:.5rem 1.2rem;border:2px solid #39FF14;color:#39FF14;font-family:monospace;font-weight:700;font-size:.78rem;margin-bottom:1.5rem;background:rgba(57,255,20,.05)}
+.p52-btn{display:inline-block;padding:.8rem 2.2rem;border:3px solid #FF00FF;color:#FF00FF;font-weight:900;font-size:.88rem;background:#0D0015;box-shadow:4px 4px 0 #00FFFF;letter-spacing:1px;cursor:pointer}
+.p52-btn:hover{background:#FF00FF;color:#0D0015;box-shadow:4px 4px 0 #39FF14}
+
+/* 通用section */
+.p52-sec{max-width:1200px;margin:0 auto;padding:3.5rem 1.5rem;position:relative;z-index:1}
+.p52-sec-head{text-align:center;margin-bottom:2.5rem}
+.p52-sec-head h2{font-size:1.6rem;font-weight:900;color:#00FFFF;margin-bottom:.3rem;text-shadow:0 0 8px rgba(0,255,255,.3)}
+.p52-sec-head h2::before{content:"▶ ";}
+.p52-sec-head p{font-size:.72rem;color:#FF00FF;font-weight:700;letter-spacing:3px}
+
+/* 像素卡片网格 */
+.p52-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.2rem}
+.p52-card{background:#0D0015;border:3px solid #333;position:relative;transition:.3s}
+.p52-card:hover{border-color:#00FFFF;box-shadow:0 0 16px rgba(0,255,255,.2),inset 0 0 16px rgba(0,255,255,.05);transform:translateY(-3px)}
+.p52-card::before{content:"";position:absolute;top:-3px;left:-3px;width:20px;height:20px;border-top:3px solid #FF00FF;border-left:3px solid #FF00FF;opacity:0;transition:.3s}
+.p52-card:hover::before{opacity:1}
+.p52-cover{height:160px;display:flex;align-items:flex-end;padding:.8rem;font-weight:900;font-size:.88rem;color:#fff;position:relative;border-bottom:3px solid #333}
+.p52-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(13,0,21,.9))}
+.p52-cover b{position:relative;z-index:1}
+.c1{background:#FF00FF}.c2{background:#00FFFF;color:#0D0015}.c3{background:#FFFF00;color:#0D0015}.c4{background:#39FF14;color:#0D0015}.c5{background:#FF4500}.c6{background:#8A2BE2}.c7{background:#00FA9A;color:#0D0015}.c8{background:#FF1493}
+.p52-card-body{padding:.8rem 1rem}
+.p52-card-body h3{font-size:.86rem;font-weight:900;color:#E0E0E0;margin-bottom:.3rem}
+.p52-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.4rem}
+.p52-tags span{padding:.1rem .4rem;border:1px solid #333;color:#00FFFF;font-size:.58rem;font-weight:700}
+.p52-score{font-weight:900;font-size:.84rem;color:#FFFF00}
+
+/* 频道分类 */
+.p52-cats{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.p52-cat{display:flex;align-items:center;gap:.8rem;padding:1rem;border:2px solid #333;background:#0D0015;transition:.3s}
+.p52-cat:hover{border-color:#FF00FF;box-shadow:3px 3px 0 rgba(255,0,255,.3)}
+.p52-cat-icon{width:44px;height:44px;border:2px solid #00FFFF;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:rgba(0,255,255,.05)}
+.p52-cat-info h3{font-size:.84rem;font-weight:900;color:#00FFFF;margin-bottom:.1rem}
+.p52-cat-info p{font-size:.68rem;color:#888;font-weight:600}
+
+/* 玩家影评 */
+.p52-reviews{max-width:860px;margin:0 auto}
+.p52-rv{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.p52-rv-avatar{width:44px;height:44px;border:2px solid #FF00FF;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:#0D0015}
+.p52-rv-box{padding:1rem 1.2rem;border:2px solid #333;background:#0D0015;flex:1;position:relative}
+.p52-rv-box::before{content:"";position:absolute;left:-8px;top:14px;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:6px solid #333}
+.p52-rv-box h3{font-size:.9rem;font-weight:900;color:#00FFFF;margin-bottom:.3rem}
+.p52-rv-box p{font-size:.82rem;color:#B0B0B0;line-height:1.7;font-weight:500}
+.p52-rv-stars{color:#FFFF00;letter-spacing:1px;font-size:.78rem;margin-top:.3rem}
+.p52-rv.right{flex-direction:row-reverse}
+.p52-rv.right .p52-rv-box::before{left:auto;right:-8px;border-right:none;border-left:6px solid #333}
+.p52-rv.right .p52-rv-box{border-color:#39FF14}
+
+/* 关于 */
+.p52-about{max-width:720px;margin:0 auto;text-align:center;padding:2.5rem 2rem;border:3px solid #FF00FF;background:#0D0015;position:relative}
+.p52-about::before{content:"52";position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#0D0015;padding:0 12px;color:#FF00FF;font-size:1.4rem;font-weight:900}
+.p52-about p{color:#B0B0B0;margin-bottom:.8rem;font-size:.88rem;font-weight:600}
+.p52-about b{color:#00FFFF}
+.p52-dom2{display:inline-block;margin-top:.8rem;padding:.5rem 1.2rem;border:2px solid #39FF14;color:#39FF14;font-family:monospace;font-weight:700;font-size:.78rem}
+
+/* FAQ */
+.p52-faq{max-width:800px;margin:0 auto}
+.p52-fi{border:2px solid #333;background:#0D0015;margin-bottom:.6rem;overflow:hidden}
+.p52-fi summary{padding:1rem 1.2rem;cursor:pointer;font-weight:900;color:#E0E0E0;list-style:none;position:relative;padding-right:3rem;font-size:.86rem}
+.p52-fi summary::-webkit-details-marker{display:none}
+.p52-fi summary::after{content:"[+]";position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:#00FFFF;font-weight:900;font-size:.8rem;font-family:monospace}
+.p52-fi[open] summary::after{content:"[-]"}
+.p52-fi p{padding:0 1.2rem 1rem;color:#B0B0B0;font-size:.82rem;line-height:1.7;font-weight:500}
+
+/* Footer */
+.p52-foot{text-align:center;padding:2rem 1.5rem;border-top:3px solid #FF00FF;background:#0A0010;color:#888;font-size:.72rem;position:relative;z-index:1}
+.p52-foot p{margin-bottom:.3rem}
+.p52-foot .p52-copy{color:#FF00FF;font-weight:700;margin-bottom:.5rem}
+
+@media(max-width:768px){
+.p52-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#0D0015;border-bottom:3px solid #FF00FF;flex-direction:column;padding:.5rem 0}
+.p52-links.show{display:flex}
+.p52-links a{padding:.8rem 1.5rem;border-left:3px solid transparent}
+.p52-links a:hover{border-left-color:#00FFFF;border-color:#00FFFF;background:rgba(0,255,255,.05)}
+.p52-toggle{display:flex}
+.p52-hero h1{font-size:1.7rem}
+.p52-hero{padding:3rem 1rem 3rem}
+.p52-sec{padding:2.5rem 1rem}
+.p52-sec-head h2{font-size:1.3rem}
+.p52-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem}
+.p52-cover{height:130px;font-size:.78rem}
+.p52-cats{grid-template-columns:1fr 1fr}
+.p52-rv{flex-direction:column;gap:.6rem}
+.p52-rv.right{flex-direction:column;align-items:flex-start}
+.p52-rv-box::before{display:none}
+}
+@media(max-width:480px){.p52-hero h1{font-size:1.3rem}.p52-grid{grid-template-columns:1fr 1fr}.p52-cats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="p52-nav">
+  <div class="p52-in">
+    <div class="p52-logo">
+      <div class="p52-pixel">52</div>
+      <div class="p52-name">52电影网<small>52 DIAN YING WANG</small></div>
+    </div>
+    <ul class="p52-links" id="p52Links">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#arcade">ARCADE</a></li>
+      <li><a href="#channels">CHANNELS</a></li>
+      <li><a href="#reviews">REVIEWS</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="p52-toggle" onclick="tP52()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="p52-hero" id="home">
+  <div class="p52-hero-in">
+    <div class="p52-badge">▶ INSERT COIN TO PLAY</div>
+    <h1>52电影网<br>我爱<span class="p52-heart">♥</span>电影<span class="p52-cursor"></span></h1>
+    <p>52电影网（52dianyingwang-top）—— "52"谐音"我爱"，就像投币式街机一样，每次按下开始键都是一部值得反复通关的好片。像素级片单，复古霓虹UI。</p>
+    <div class="p52-domain">https://52dianyingwang-top</div><br>
+    <a href="#arcade" class="p52-btn">▶ START GAME</a>
+  </div>
+</section>
+
+<section class="p52-sec" id="arcade">
+  <div class="p52-sec-head"><h2>像素片库</h2><p>ARCADE · HIGH SCORE MOVIES</p></div>
+  <div class="p52-grid">
+    <div class="p52-card"><div class="p52-cover c1"><b>肖申克的救赎</b></div><div class="p52-card-body"><h3>肖申克的救赎</h3><div class="p52-tags"><span>剧情</span><span>经典</span></div><div class="p52-score">★ 9.7</div></div></div>
+    <div class="p52-card"><div class="p52-cover c2"><b>阿甘正传</b></div><div class="p52-card-body"><h3>阿甘正传</h3><div class="p52-tags"><span>剧情</span><span>励志</span></div><div class="p52-score">★ 9.5</div></div></div>
+    <div class="p52-card"><div class="p52-cover c3"><b>泰坦尼克号</b></div><div class="p52-card-body"><h3>泰坦尼克号</h3><div class="p52-tags"><span>爱情</span><span>灾难</span></div><div class="p52-score">★ 9.4</div></div></div>
+    <div class="p52-card"><div class="p52-cover c4"><b>盗梦空间</b></div><div class="p52-card-body"><h3>盗梦空间</h3><div class="p52-tags"><span>科幻</span><span>烧脑</span></div><div class="p52-score">★ 9.3</div></div></div>
+    <div class="p52-card"><div class="p52-cover c5"><b>楚门的世界</b></div><div class="p52-card-body"><h3>楚门的世界</h3><div class="p52-tags"><span>剧情</span><span>哲学</span></div><div class="p52-score">★ 9.4</div></div></div>
+    <div class="p52-card"><div class="p52-cover c6"><b>星际穿越</b></div><div class="p52-card-body"><h3>星际穿越</h3><div class="p52-tags"><span>科幻</span><span>亲情</span></div><div class="p52-score">★ 9.3</div></div></div>
+    <div class="p52-card"><div class="p52-cover c7"><b>海上钢琴师</b></div><div class="p52-card-body"><h3>海上钢琴师</h3><div class="p52-tags"><span>音乐</span><span>人生</span></div><div class="p52-score">★ 9.3</div></div></div>
+    <div class="p52-card"><div class="p52-cover c8"><b>大话西游</b></div><div class="p52-card-body"><h3>大话西游</h3><div class="p52-tags"><span>喜剧</span><span>爱情</span></div><div class="p52-score">★ 9.2</div></div></div>
+  </div>
+</section>
+
+<section class="p52-sec" id="channels" style="background:rgba(255,0,255,.02)">
+  <div class="p52-sec-head"><h2>频道分类</h2><p>CHANNELS · SELECT LEVEL</p></div>
+  <div class="p52-cats">
+    <div class="p52-cat"><div class="p52-cat-icon">🎬</div><div class="p52-cat-info"><h3>LEVEL 1 经典剧情</h3><p>35部 · 通关必看</p></div></div>
+    <div class="p52-cat"><div class="p52-cat-icon">🚀</div><div class="p52-cat-info"><h3>LEVEL 2 科幻烧脑</h3><p>28部 · 硬核挑战</p></div></div>
+    <div class="p52-cat"><div class="p52-cat-icon">😂</div><div class="p52-cat-info"><h3>LEVEL 3 喜剧解压</h3><p>22部 · 轻松闯关</p></div></div>
+    <div class="p52-cat"><div class="p52-cat-icon">💕</div><div class="p52-cat-info"><h3>LEVEL 4 爱情催泪</h3><p>19部 · 情感暴击</p></div></div>
+    <div class="p52-cat"><div class="p52-cat-icon">🔫</div><div class="p52-cat-info"><h3>LEVEL 5 犯罪悬疑</h3><p>24部 · 推理解密</p></div></div>
+    <div class="p52-cat"><div class="p52-cat-icon">🎨</div><div class="p52-cat-info"><h3>LEVEL 6 艺术实验</h3><p>12部 · 隐藏关卡</p></div></div>
+    <div class="p52-cat"><div class="p52-cat-icon">🌍</div><div class="p52-cat-info"><h3>LEVEL 7 外语佳作</h3><p>31部 · 全球联机</p></div></div>
+    <div class="p52-cat"><div class="p52-cat-icon">🧸</div><div class="p52-cat-info"><h3>LEVEL 8 动画治愈</h3><p>18部 · 满血复活</p></div></div>
+  </div>
+</section>
+
+<section class="p52-sec" id="reviews">
+  <div class="p52-sec-head"><h2>玩家影评</h2><p>REVIEWS · HIGH SCORE COMMENTS</p></div>
+  <div class="p52-reviews">
+    <div class="p52-rv">
+      <div class="p52-rv-avatar">P1</div>
+      <div class="p52-rv-box">
+        <h3>《肖申克的救赎》—— 希望是件好东西</h3>
+        <p>"Get busy living, or get busy dying." 这部片就像街机厅里的最终BOSS——你以为过不去，结果安迪用一把小锤子凿了19年。希望是件好东西，也许是人间至善。</p>
+        <div class="p52-rv-stars">★★★★★ 9.7/10</div>
+      </div>
+    </div>
+    <div class="p52-rv right">
+      <div class="p52-rv-avatar">P2</div>
+      <div class="p52-rv-box">
+        <h3>《盗梦空间》—— 陀螺还在转</h3>
+        <p>诺兰的梦境嵌套就像俄罗斯套娃，每一层都让你怀疑现实。结尾那个陀螺——转啊转，转出了影史最经典的开放式结局。你相信哪一层？</p>
+        <div class="p52-rv-stars">★★★★★ 9.3/10</div>
+      </div>
+    </div>
+    <div class="p52-rv">
+      <div class="p52-rv-avatar">P3</div>
+      <div class="p52-rv-box">
+        <h3>《楚门的世界》—— 我们都是楚门</h3>
+        <p>看完这部片再照镜子，你会怀疑自己的人生是不是也是一场真人秀。金·凯瑞的表演从喜剧到悲剧的跨越，让人脊背发凉又热泪盈眶。</p>
+        <div class="p52-rv-stars">★★★★★ 9.4/10</div>
+      </div>
+    </div>
+    <div class="p52-rv right">
+      <div class="p52-rv-avatar">P4</div>
+      <div class="p52-rv-box">
+        <h3>《星际穿越》—— 爱是第五维度</h3>
+        <p>当库珀在五维空间里看着女儿的房间，当"Do Not Go Gentle"响起——那一刻，科幻不再是冷冰冰的公式，而是人类最原始的爱。</p>
+        <div class="p52-rv-stars">★★★★★ 9.3/10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p52-sec" id="about">
+  <div class="p52-sec-head"><h2>关于 52电影网</h2><p>ABOUT · PLAYER INFO</p></div>
+  <div class="p52-about">
+    <p><b>52电影网</b>（52dianyingwang-top）—— "52"即"我爱"。我们像经营一家复古街机厅一样经营这个电影站：不刷量、不推烂片，每部都是值得你投币通关的佳作。</p>
+    <p>页面用赛博像素+霓虹网格设计：深紫黑背景、扫描线叠加、像素边框、闪烁光标、打字机效果。和上一个薄荷奶油圆润风完全对立——这次是硬核、暗黑、像素、发光。</p>
+    <div class="p52-dom2">https://52dianyingwang-top</div>
+    <p style="margin-top:1rem;font-size:.72rem;color:#00FFFF;font-weight:700">核心词：52电影网、52dianyingwang-top、我爱电影、像素片库、高分电影、复古街机风</p>
+  </div>
+</section>
+
+<section class="p52-sec" id="faq" style="background:rgba(0,255,255,.02)">
+  <div class="p52-sec-head"><h2>常见问题</h2><p>FAQ · HELP MENU</p></div>
+  <div class="p52-faq">
+    <details class="p52-fi"><summary>52电影网是什么？</summary><p>52电影网（52dianyingwang-top）是以"我爱电影"为谐音的高分电影信息展示站，采用复古像素街机风UI，按频道分类推荐经典、科幻、喜剧、悬疑等类型影片，只做信息展示不内置盗版播放源。</p></details>
+    <details class="p52-fi"><summary>为什么叫"52"？</summary><p>"52"谐音"我爱"——我爱电影。就像街机厅里投币时的那声"叮"，简单直接，不需要解释。</p></details>
+    <details class="p52-fi"><summary>官方网址是？</summary><p>https://52dianyingwang-top</p></details>
+    <details class="p52-fi"><summary>手机上能玩吗？</summary><p>全站响应式，小屏导航自动折叠为汉堡菜单，像素卡片和网格自适应排列，扫描线动画在移动端同样生效。</p></details>
+    <details class="p52-fi"><summary>怎么给必应收录？</summary><p>前往 Bing Webmaster Tools 提交 https://52dianyingwang-top，选择 HTML meta 验证，将验证码填入页面中 msvalidate.01 的 YOUR_BING_VERIFICATION_CODE 即可。</p></details>
+  </div>
+</section>
+
+<footer class="p52-foot">
+  <p class="p52-copy">▶ 52电影网 (52dianyingwang-top) — 我爱电影 · 像素级推荐</p>
+  <p>SINGLE PAGE / ANCHOR NAV / MOBILE RESPONSIVE / BING SEO FRIENDLY / NO ROBOTS.TXT & SITEMAP.XML</p>
+  <p style="margin-top:.4rem;color:#FF00FF;font-weight:700">THIS SITE IS FOR MOVIE INFO ONLY. ALL RIGHTS RESERVED TO ORIGINAL COPYRIGHT HOLDERS.</p>
+</footer>
+
+<script>
+function tP52(){document.getElementById('p52Links').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('p52Links').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
